@@ -1,7 +1,9 @@
 pipeline{
+    
     agent any
     
     stages{
+        
         stage('Build'){
             steps{
                 bat 'mvn package'
@@ -9,7 +11,7 @@ pipeline{
         }
         stage('Test'){
             steps{
-                echo 'Testing'
+                echo 'Testing stage'
             }
         }
         stage('Deploy'){
